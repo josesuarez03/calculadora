@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Total a Pagar por Persona</title>
+</head>
+<body>
+    <h1>Total a Pagar por Persona</h1>
+    {% if total_por_persona_bs is not none %}
+    <p>Total a Pagar por Persona en Bolívares: {{ total_por_persona_bs }} Bs</p>
+    <p>Total a Pagar por Persona en Dólares: ${{ total_por_persona_dolar }}</p>
+    {% else %}
+    <p>Ingrese el número de personas en el formulario anterior.</p>
+    {% endif %}
+</body>
+</html>

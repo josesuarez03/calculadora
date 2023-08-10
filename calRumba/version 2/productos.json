@@ -1,0 +1,30 @@
+{
+    "agua":{
+        "name": "agua",
+        "price": "3"
+    },
+    "refresco":{
+        "name":"refresco 1L",
+        "price":"5"
+    },
+    "santa teresa gr":{
+        "name":"santa reserva gran reserva",
+        "price":"25"
+    },
+    "cacique500":{
+        "name":"cacique 500",
+        "price":"40"
+    },
+    "gordons":{
+        "name":"gordons",
+        "price":"25"
+    },
+    "absolut":{
+        "name":"absolut",
+        "price":"40"
+    },
+    "black label":{
+        "name":"black label",
+        "price":"80"
+    }
+}

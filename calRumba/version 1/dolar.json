@@ -1,0 +1,80 @@
+{
+    "bancamiga": {
+        "change": "0,00%",
+        "last_update": "hace 6 d\u00edas",
+        "price": "29.83",
+        "title": "Bancamiga"
+    },
+    "banco_de_venezuela": {
+        "change": "0,00%",
+        "last_update": "hace 26 d\u00edas",
+        "price": "28.45",
+        "title": "Banco de Venezuela"
+    },
+    "banco_exterior": {
+        "change": "0,00%",
+        "last_update": "hace 5 d\u00edas",
+        "price": "30.63",
+        "title": "Banco Exterior"
+    },
+    "banesco": {
+        "change": "0,00%",
+        "last_update": "hace 2 d\u00edas",
+        "price": "31.36",
+        "title": "Banesco"
+    },
+    "banplus": {
+        "change": "0,00%",
+        "last_update": "hace 20 d\u00edas",
+        "price": "29.62",
+        "title": "Banplus"
+    },
+    "bbva_provincial": {
+        "change": "0,00%",
+        "last_update": "hace 2 d\u00edas",
+        "price": "31.01",
+        "title": "BBVA Provincial"
+    },
+    "bcv": {
+        "change": "\u2b06 0,42%",
+        "last_update": "hace 20 horas",
+        "price": "31.10",
+        "title": "BCV"
+    },
+    "bnc": {
+        "change": "0,00%",
+        "last_update": "hace 2 d\u00edas",
+        "price": "31.02",
+        "title": "BNC"
+    },
+    "italcambio": {
+        "change": "\u2b06 0,42%",
+        "last_update": "hace 14 horas",
+        "price": "31.41",
+        "title": "Italcambio"
+    },
+    "mercantil": {
+        "change": "0,00%",
+        "last_update": "hace 2 d\u00edas",
+        "price": "31.00",
+        "title": "Mercantil"
+    },
+    "otras_instituciones": {
+        "change": "0,00%",
+        "last_update": "hace 20 horas",
+        "price": "31.10",
+        "title": "Otras Instituciones"
+    },
+    "petro": {
+        "change": "0,00%",
+        "last_update": "hace m\u00e1s de un mes",
+        "price": "1.446.25",
+        "title": "Petro"
+    },
+    "remesas_zoom": {
+        "change": "\u2b06 0,42%",
+        "last_update": "hace 14 horas",
+        "price": "31.41",
+        "title": "Remesas Zoom"
+    }
+}

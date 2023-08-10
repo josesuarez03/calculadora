@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Catálogo de Productos</title>
+</head>
+<body>
+    <section class="NovidadesSection">
+        <main class="mainDestacados">
+          <h2>NOVIDADES</h2>
+          <section class="containerProdutos">
+            <form method="post" action="/catalogo">
+              {% for key, value in catalogo.items() %}
+                <div class="produto">
+                  <div class="productDescription">
+                    <h3 class="produto__title">{{ value['name'] }}</h3>
+                    <span class="produto__price">${{ value['price'] }}</span>
+                  </div>
+                  <input type="number" name="{{ key }}_cantidad" value="">
+                  <button type="submit" name="producto" value="{{ key }}" class="add-to-cart">Agregar al carrito</button>
+                </div>
+              {% endfor %}
+            </form>
+          </section>
+          <a href="/carrito" class="ver-carrito">Ver Carrito</a>
+        </main>
+      </section>
+      
+      
+      
+</body>
+</html>

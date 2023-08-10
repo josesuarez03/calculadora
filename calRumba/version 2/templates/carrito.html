@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Carrito de Compras</title>
+</head>
+<body>
+    <h1>Carrito de Compras</h1>
+    <table>
+        <tr>
+            <th>Producto</th>
+            <th>Cantidad</th>
+            <th>Precio Unitario</th>
+            <th>Total en Dólares</th>
+            <th>Total en Bolívares</th>
+        </tr>
+        {% for item in carrito %}
+            <tr>
+                <td>{{ item["producto"] }}</td>
+                <td>{{ item["cantidad"] }}</td>
+                <td>${{ item["precio_unitario"] }}</td>
+                <td>${{ item["total_dolar"] }}</td>
+                <td>{{ item["total_bs"] }} Bs</td>
+            </tr>
+        {% endfor %}
+    </table>
+    <p><a href="{{ url_for('catalogo') }}">Volver al Catálogo</a></p>
+    <form method="post" action="/calcular_pago">
+        <label for="num_personas">Número de Personas:</label>
+        <input type="number" id="num_personas" name="num_personas" required><br><br>
+
+        <input type="submit" value="Calcular Pago por Persona">
+    </form>
+</body>
+</html>
+
