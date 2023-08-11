@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculadora de Rumba</title>
+    <link rel="stylesheet" href=".\static\style.css">
+</head>
+<body>
+    <h1>Calculadora de Rumba</h1>
+    <form method="post">
+        <label for="person">Cantidad de personas</label><br>
+        <input type="number" id="person" name="person" required><br><br>
+
+        <label for="cantidad_servicio">Cantidad de servicios</label><br>
+        <input type="number" id="cantidad_servicio" name="cantidad_servicio" required><br><br>
+
+        <label for="servicio">Tipo de servicio</label>
+        <select id="servicio" name="servicio">
+            <option value="">Selecciona una opcion</option>
+            <option value="sin_promo">Sin Promo</option>
+            <option value="con_promo">Con Promo</option>
+        </select><br><br>
+
+        <input type="submit" value="Calcular">
+
+
+    </form>
+
+    <form action="{{ url_for('limpiar') }}" method="POST">
+        <input type="submit" value="Limpiar Resultados" class="limpiar-button">
+    </form>
+    
+    <div>
+        {% if total_dolar %}
+        <h2>Resultado</h2>
+        <p>Total en Dólares c/u: ${{ total_dolar }}</p>
+        <p>Total en Bolívares c/u: {{ total_bs }} Bs</p>
+        {% endif %}
+    </div>
+
+</body>
+</html>
