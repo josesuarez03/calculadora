@@ -98,6 +98,16 @@ def limpiar_2():
         return render_template('calculadoraPagos.html', total_dolar=None, total_bs=None)
     else:
         return redirect(url_for('calculadora_pagos'))
+    
+@app.route('/preciodolarbs', methods=['GET','POST'])
+def dolarbs():
+    if request.method == 'POST':
+        try:
+            price = cotizacion()
+            return render_template('preciodolar.html', precio_dolar=price)
+        except:
+            return "Error al obtener la información"
+    return render_template('preciodolar.html')
 
 
 
