@@ -1,0 +1,80 @@
+{
+    "bancamiga": {
+        "change": "\u2b06 0,29%",
+        "last_update": "hace 16 horas",
+        "price": "31.31",
+        "title": "Bancamiga"
+    },
+    "banco_de_venezuela": {
+        "change": "\u2b06 9,81%",
+        "last_update": "hace 16 horas",
+        "price": "31.24",
+        "title": "Banco de Venezuela"
+    },
+    "banco_exterior": {
+        "change": "0,00%",
+        "last_update": "hace 2 d\u00edas",
+        "price": "31.24",
+        "title": "Banco Exterior"
+    },
+    "banesco": {
+        "change": "\u2b06 0,86%",
+        "last_update": "hace 16 horas",
+        "price": "31.54",
+        "title": "Banesco"
+    },
+    "banplus": {
+        "change": "0,00%",
+        "last_update": "hace 22 d\u00edas",
+        "price": "29.62",
+        "title": "Banplus"
+    },
+    "bbva_provincial": {
+        "change": "\u2b06 0,35%",
+        "last_update": "hace 16 horas",
+        "price": "31.20",
+        "title": "BBVA Provincial"
+    },
+    "bcv": {
+        "change": "\u2b06 0,38%",
+        "last_update": "hace 16 horas",
+        "price": "31.36",
+        "title": "BCV"
+    },
+    "bnc": {
+        "change": "0,00%",
+        "last_update": "hace 4 d\u00edas",
+        "price": "31.02",
+        "title": "BNC"
+    },
+    "italcambio": {
+        "change": "\u2b06 0,38%",
+        "last_update": "hace 11 horas",
+        "price": "31.67",
+        "title": "Italcambio"
+    },
+    "mercantil": {
+        "change": "\u2b06 0,64%",
+        "last_update": "hace 16 horas",
+        "price": "31.63",
+        "title": "Mercantil"
+    },
+    "otras_instituciones": {
+        "change": "0,00%",
+        "last_update": "hace 16 horas",
+        "price": "31.69",
+        "title": "Otras Instituciones"
+    },
+    "petro": {
+        "change": "0,00%",
+        "last_update": "hace m\u00e1s de un mes",
+        "price": "1.446.25",
+        "title": "Petro"
+    },
+    "remesas_zoom": {
+        "change": "\u2b06 0,38%",
+        "last_update": "hace 10 horas",
+        "price": "31.67",
+        "title": "Remesas Zoom"
+    }
+}

@@ -32,6 +32,8 @@ def home():
             return redirect(url_for('calculadora_rumba'))
         elif 'calculadora_pagos' in request.form:
             return redirect(url_for('calculadora_pagos'))
+        elif 'dolarbs' in request.form:
+            return redirect(url_for('dolarbs'))
     
     return render_template('index.html')
 
@@ -108,8 +110,6 @@ def dolarbs():
         except:
             return "Error al obtener la información"
     return render_template('preciodolar.html')
-
-
 
 
 if __name__ == '__main__':
