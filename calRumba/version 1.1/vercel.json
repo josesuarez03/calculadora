@@ -1,6 +1,14 @@
 {
-  "rewrites": [
-    { "source": "/(.*)", "destination": "calRumba/version 1.1/app.py" }
-  ]
-}
+    "version": 2,
+    "builds": [
+      { "src": "calRumba/version 1.1/app.py", "use": "@vercel/python" }
+    ],
+    "routes": [
+      { "src": "/static/(.*)", "dest": "/static/$1" },
+      { "src": "/(.*)", "dest": "calRumba/version 1.1/app.py" }
+    ],
+    "env": {
+      "FLASK_ENV": "production"
+    }
+  }
   
