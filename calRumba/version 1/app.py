@@ -2,6 +2,7 @@ from flask import Flask, render_template, request, jsonify, redirect, url_for
 import requests
 
 app = Flask(__name__)
+app.static_folder = 'static'
 
 def cotizacion():
     base_url = "https://pydolarvenezuela-api.vercel.app/api/v1/dollar"
