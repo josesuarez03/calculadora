@@ -13,8 +13,12 @@
         <div class="container">
             <header>
                 <h1>Precio dolar</h1>
+                <img src="{{ url_for('static', filename='BCV.png') }}" alt="Dólar">
             </header>
-            <form method="post" action="" ></form>
+            <main>
+                <p>La cotización actual del dólar es: {{ precio_dolar }}</p>
+                <a href="{{ url_for('dolarbs') }}">Ver cotización del dólar</a>
+            </main>
         </div>
 
     </body>
