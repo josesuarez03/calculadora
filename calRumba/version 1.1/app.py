@@ -1,8 +1,10 @@
 from flask import Flask, render_template, request, jsonify, redirect, url_for
 import requests
+from flask_cors import CORS
 
 app = Flask(__name__)
 app.static_folder = 'static'
+CORS(app)
 
 def cotizacion():
     base_url = "https://pydolarvenezuela-api.vercel.app/api/v1/dollar"
@@ -23,7 +25,7 @@ def cotizacion():
         print("Error en la solicitud:", e)
         return None
     
-app.route('/', methods=['GET', 'POST'])
+@app.route('/', methods=['GET', 'POST'])
 def home():
     if request.method == 'POST':
         if 'calculadora_rumba' in request.form:
@@ -33,7 +35,7 @@ def home():
     
     return render_template('index.html')
 
-app.route('/calculadora-pagos', methods=['GET', 'POST'])
+@app.route('/calculadora-pagos', methods=['GET', 'POST'])
 def calculadora_pagos():
     if request.method == 'POST':
 
@@ -45,11 +47,11 @@ def calculadora_pagos():
             total = coste / people
             total_bs = total * price
 
-            return render_template('calculadoraPumba.html', total_dolar=total, total_bs=total_bs)
+            return render_template('calculadoraPagos.html', total_dolar=total, total_bs=total_bs)
         except:
             return "Error en los datos ingresados."
 
-    return render_template('calculadoraPumba.html')
+    return render_template('calculadoraPagos.html')
 
 
 @app.route('/calculadora-rumba', methods=['GET', 'POST'])
@@ -83,12 +85,20 @@ def calculadora_rumba():
 
 
 
-@app.route('/limpiar', methods=['GET', 'POST'])
-def limpiar():
+@app.route('/limpiar-1', methods=['GET', 'POST'])
+def limpiar_1():
     if request.method == 'GET':
         return render_template('calculadoraRumba.html', total_dolar=None, total_bs=None)
     else:
-        return redirect(url_for('caculadora_rumba'))
+        return redirect(url_for('calculadora_rumba'))
+
+@app.route('/limpiar-2', methods=['GET', 'POST'])
+def limpiar_2():
+    if request.method == 'GET':
+        return render_template('calculadoraPagos.html', total_dolar=None, total_bs=None)
+    else:
+        return redirect(url_for('calculadora_pagos'))
+
 
 
 
