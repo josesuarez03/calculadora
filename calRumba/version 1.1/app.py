@@ -22,9 +22,38 @@ def cotizacion():
     except requests.exceptions.RequestException as e:
         print("Error en la solicitud:", e)
         return None
+    
+app.route('/', methods=['GET', 'POST'])
+def home():
+    if request.method == 'POST':
+        if 'calculadora_rumba' in request.form:
+            return redirect(url_for('calculadora_rumba'))
+        elif 'calculadora_pagos' in request.form:
+            return redirect(url_for('calculadora_pagos'))
+    
+    return render_template('index.html')
 
-@app.route('/', methods=['GET', 'POST'])
-def index():
+app.route('/calculadora-pagos', methods=['GET', 'POST'])
+def calculadora_pagos():
+    if request.method == 'POST':
+
+        try:
+            people = int(request.form['person'])
+            coste = int(request.form['coste'])
+
+            price = cotizacion()
+            total = coste / people
+            total_bs = total * price
+
+            return render_template('calculadoraPumba.html', total_dolar=total, total_bs=total_bs)
+        except:
+            return "Error en los datos ingresados."
+
+    return render_template('calculadoraPumba.html')
+
+
+@app.route('/calculadora-rumba', methods=['GET', 'POST'])
+def calculadora_rumba():
     if request.method == 'POST':
 
         con_promo = 20
@@ -46,18 +75,20 @@ def index():
             total = (servicio_costo * cantidad_servicio) / person
             total_bs = total * price
 
-            return render_template('index.html', total_dolar=total, total_bs=total_bs)
+            return render_template('calculadoraRumba.html', total_dolar=total, total_bs=total_bs)
         except:
             return "Error en los datos ingresados."
 
-    return render_template('index.html')
+    return render_template('calculadoraRumba.html')
+
+
 
 @app.route('/limpiar', methods=['GET', 'POST'])
 def limpiar():
     if request.method == 'GET':
-        return render_template('index.html', total_dolar=None, total_bs=None)
+        return render_template('calculadoraRumba.html', total_dolar=None, total_bs=None)
     else:
-        return redirect(url_for('index'))
+        return redirect(url_for('caculadora_rumba'))
 
 
 
