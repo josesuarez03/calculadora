@@ -8,8 +8,8 @@
     <link rel="stylesheet" href=".\static\style.css">
 </head>
 <body>
-    
-    <h1>Calculadora de Pagos</h1>
+    <div class="container">
+        <h1>Calculadora de Pagos</h1>
     <form method="post">
         <label for="person">Cantidad de personas</label><br>
         <input type="number" id="person" name="person" required><br><br>
@@ -30,6 +30,8 @@
     <form action="{{ url_for('home') }}" method="GET">
         <input type="submit" value="Volver al Inicio" class="volver-button">
     </form>
+    </div>
+    
     
     
     <div>
